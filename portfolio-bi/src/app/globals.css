@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    /* #0f172a - Slate 900 */
+    --foreground: 210 40% 98%;
+    /* Slate 50 */
+
+    --primary: 217 91% 60%;
+    /* Blue 500 */
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 199 89% 48%;
+    /* Sky 500 */
+    --secondary-foreground: 222 47% 11%;
+
+    --accent: 262 83% 58%;
+    /* Purple 500 */
+    --accent-foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    /* #1e293b - Slate 800 */
+    --card-foreground: 210 40% 98%;
+
+    --font-outfit: 'Outfit', sans-serif;
+  }
+
+  body {
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    font-family: var(--font-outfit);
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-hover:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
+}
